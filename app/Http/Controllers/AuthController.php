@@ -29,4 +29,12 @@ class AuthController extends Controller
             'username' => 'Username dan password salah!.',
         ])->onlyInput('username');
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return to_route('login');
+    }
 }

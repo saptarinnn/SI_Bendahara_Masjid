@@ -29,7 +29,12 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="login.html">Keluar</a></li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button class="btn text-danger dropdown-item">Keluar</button>
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                         <!--//app-user-dropdown-->

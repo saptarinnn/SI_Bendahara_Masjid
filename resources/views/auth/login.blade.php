@@ -18,6 +18,21 @@
     <!-- App CSS -->
     <link id="theme-style" rel="stylesheet" href="{{ asset('assets/css/portal.css') }}">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Jaini+Purva&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Darker Grotesque", system-ui !important;
+            font-weight: bold !important;
+        }
+
+        .logo-text {
+            font-family: "Jaini Purva", system-ui !important;
+        }
+    </style>
+
 </head>
 
 <body class="app app-login p-0">
@@ -25,13 +40,13 @@
         <div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5 d-flex align-items-center justify-content-center">
             <div class="d-flex flex-column align-content-end">
                 <div class="app-auth-body mx-auto">
-                    <h2 class="auth-heading text-center mb-5">Masuk ke SIM Masjid</h2>
+                    <h2 class="auth-heading text-center mb-5">Masuk ke <span class="logo-text">SIM Masjid</span></h2>
                     <div class="auth-form-container text-start">
                         <form class="auth-form login-form" method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="email mb-3">
                                 <label class="sr-only" for="username">Username</label>
-                                <input id="username" name="username" type="text" class="form-control form-control-sm signin-email @error('username') is-invalid @enderror" placeholder="Username" required="required">
+                                <input id="username" name="username" type="text" class="form-control fw-bold signin-email @error('username') is-invalid @enderror" placeholder="Username" required="required">
                                 @error('username')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -39,7 +54,7 @@
                             <!--//form-group-->
                             <div class="password mb-3">
                                 <label class="sr-only" for="password">Password</label>
-                                <input id="password" name="password" type="password" class="form-control form-control-sm signin-password" placeholder="Password" required="required">
+                                <input id="password" name="password" type="password" class="form-control fw-bold signin-password" placeholder="Password" required="required">
                             </div>
                             <!--//form-group-->
                             <div class="text-center">
@@ -66,7 +81,7 @@
                 <div class="d-flex flex-column align-content-end h-100">
                     <div class="h-100"></div>
                     <div class="overlay-content p-3 p-lg-4 rounded">
-                        <h5 class="mb-3 overlay-title">SIM Masjid</h5>
+                        <h4 class="mb-1 text-white logo-text">SIM Masjid</h4>
                         <div>Sistem Informasi Manajemen Keuangan Masjid</div>
                     </div>
                 </div>
