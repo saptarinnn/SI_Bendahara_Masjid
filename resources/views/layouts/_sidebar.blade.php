@@ -41,8 +41,8 @@
                     <!--//nav-link-->
                     <div id="submenu-2" class="collapse submenu submenu-2" data-bs-parent="#menu-accordion">
                         <ul class="submenu-list list-unstyled">
-                            <li class="submenu-item"><a class="submenu-link" href="login.html">Masjid</a></li>
-                            <li class="submenu-item"><a class="submenu-link" href="signup.html">Sosial</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="{{ route('masjid.index') }}">Masjid</a></li>
+                            <li class="submenu-item"><a class="submenu-link" href="{{ route('sosial.index') }}">Sosial</a></li>
                         </ul>
                     </div>
                 </li>

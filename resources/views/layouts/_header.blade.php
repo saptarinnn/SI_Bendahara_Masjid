@@ -21,11 +21,11 @@
 
                     <div class="app-utilities col-auto">
                         <div class="app-utility-item app-user-dropdown dropdown">
-                            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                                <img src="https://eu.ui-avatars.com/api/?name={{auth()->user()->nama}}&background=random&rounded=true" alt="user profile">
+                            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style=" display: flex; justify-content: center; align-items: center; gap: 3px;">
+                                <img src="https://eu.ui-avatars.com/api/?name={{auth()->user()->nama}}&background=random&rounded=true" alt="user profile" style="width: 32px !important">
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-                                <li><a class="dropdown-item" href="settings.html">Rubah Password</a></li>
+                                <li><a class="dropdown-item fw-bold" href="settings.html">Rubah Password</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

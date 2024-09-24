@@ -14,9 +14,11 @@
         <!--//app-content-->
 
         <footer class="app-footer">
-            <div class="container text-center py-3">
+            <div class="text-end py-3 px-5">
                 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-                <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                <small class="copyright">Template by <a class="app-link" href="http://themes.3rdwavemedia.com"
+                        target="_blank">Xiaoying Riley</a></small>
+                {{-- <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small> --}}
 
             </div>
         </footer>
@@ -28,5 +30,48 @@
 
     @include('layouts._script')
 
+    <script>
+        @if ($message = session('success'))
+            Swal.fire({
+                title: 'Berhasil!',
+                text: '{{ $message }}',
+                icon: 'success',
+                confirmButtonText: 'Keluar'
+            })
+        @endif
+
+        @if ($message = session('error'))
+            Swal.fire({
+                title: 'Gagal!',
+                text: '{{ $message }}',
+                icon: 'error',
+                confirmButtonText: 'Keluar'
+            })
+        @endif
+
+        $('.show_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            Swal.fire({
+                title: "Apa kamu yakin?",
+                text: "Data tidak akan dapat dikembalikan",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Ya, hapus data!",
+                cancelButtonText: "Tidak"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+
+        new DataTable('#data-table');
+    </script>
+
 </body>
+
 </html>
