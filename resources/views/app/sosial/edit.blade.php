@@ -15,6 +15,10 @@
                     <div class="app-card-body p-3">
                         <table class="table app-table-hover mb-0 text-left">
                             <tr>
+                                <th class="cell" style="font-weight: 900" width="30%">Kode</th>
+                                <td class="cell" style="font-weight: 700" width="70%">: {{ $data->kode }}</td>
+                            </tr>
+                            <tr>
                                 <th class="cell" style="font-weight: 900" width="30%">Nama</th>
                                 <td class="cell" style="font-weight: 700" width="70%">: {{ ucwords($data->nama) }}</td>
                             </tr>
@@ -73,8 +77,10 @@
                             @csrf
                             @method('PUT')
                             <x-forms.select name="status" label="Status" required="required">
-                                <option class="fw-bold" value="1" {{ $data->status == 1 ? "selected" : "" }}>Berhasil</option>
-                                <option class="fw-bold" value="2" {{ $data->status == 2 ? "selected" : "" }}>Gagal</option>
+                                <option class="fw-bold" value="1" {{ $data->status == 1 ? 'selected' : '' }}>Berhasil
+                                </option>
+                                <option class="fw-bold" value="2" {{ $data->status == 2 ? 'selected' : '' }}>Gagal
+                                </option>
                             </x-forms.select>
 
                             <x-forms.button />

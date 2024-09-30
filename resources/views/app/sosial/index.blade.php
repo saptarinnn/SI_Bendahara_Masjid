@@ -24,6 +24,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-start">#</th>
+                                    <th>Kode</th>
                                     <th>Tgl.</th>
                                     <th>Bukti</th>
                                     <th>Nama</th>
@@ -36,6 +37,7 @@
                                 @foreach ($datas as $data)
                                     <tr>
                                         <td class="cell text-start">{{ $loop->iteration }}</td>
+                                        <td class="cell">{{ $data->kode }}</td>
                                         <td class="cell">{{ date('d/m/Y', strtotime($data->tanggal)) }}</td>
                                         <td class="cell"><a href="{{ asset('storage/' . $data->bukti) }}" target="_blank"
                                                 rel="noopener noreferrer">

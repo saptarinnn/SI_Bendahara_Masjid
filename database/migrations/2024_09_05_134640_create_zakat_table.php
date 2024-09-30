@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('zakat', function (Blueprint $table) {
             $table->id();
+            $table->string('kode', 6)->unique();
             $table->string('nama', 150);
             $table->foreignId('kategori_zakat_id')->references('id')->on('kategori_zakat')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();

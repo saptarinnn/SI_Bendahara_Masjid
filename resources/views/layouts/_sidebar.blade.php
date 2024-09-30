@@ -50,7 +50,7 @@
 
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link" href="{{ route('rekmasjid.index') }}">
                         <span class="nav-icon">
                             <i class="fa-solid fa-money-check-dollar"></i>
                         </span>
@@ -62,11 +62,35 @@
 
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link" href="charts.html">
+                    <a class="nav-link" href="{{ route('petugaszakat.index') }}">
                         <span class="nav-icon">
                             <i class="fa-solid fa-users"></i>
                         </span>
                         <span class="nav-link-text">Petugas Zakat</span>
+                    </a>
+                    <!--//nav-link-->
+                </li>
+                <!--//nav-item-->
+
+                <li class="nav-item">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <a class="nav-link" href="{{ route('zakat.index') }}">
+                        <span class="nav-icon">
+                            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        </span>
+                        <span class="nav-link-text">Zakat</span>
+                    </a>
+                    <!--//nav-link-->
+                </li>
+                <!--//nav-item-->
+
+                <li class="nav-item">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <a class="nav-link" href="{{ route('pengguna.index') }}">
+                        <span class="nav-icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </span>
+                        <span class="nav-link-text">Pengguna</span>
                     </a>
                     <!--//nav-link-->
                 </li>

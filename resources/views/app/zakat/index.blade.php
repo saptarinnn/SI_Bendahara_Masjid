@@ -12,11 +12,11 @@
                             <div class="col-auto">
                                 <h4 class="app-card-title fw-bold">Data {{ $title }}</h4>
                             </div><!--//col-->
-                            {{-- <div class="col-auto">
+                            <div class="col-auto">
                                 <div class="card-header-action">
-                                    <a href="{{ route('masjid.create') }}">Tambah Data</a>
+                                    <a href="{{ route('zakat.create') }}">Tambah Data</a>
                                 </div><!--//card-header-actions-->
-                            </div><!--//col--> --}}
+                            </div><!--//col-->
                         </div><!--//row-->
                     </div><!--//app-card-header-->
                     <div class="app-card-body p-3">
@@ -56,10 +56,10 @@
                                         </td>
                                         <td class="cell">
                                             <a style="border-radius: 4px; padding: 2px 10px; margin: 5px 0;"
-                                                class="small app-btn-secondary text-info" href="{{ route('masjid.show', $data->id) }}">Detail</i></a>
+                                                class="small app-btn-secondary text-info" href="{{ route('zakat.show', $data->id) }}">Detail</i></a>
                                             <a style="border-radius: 4px; padding: 2px 10px; margin: 5px 0;"
-                                                class="small app-btn-secondary text-primary" href="{{ route('masjid.edit', $data->id) }}">Konfirmasi</a>
-                                            <form action="{{ route('masjid.destroy', $data->id) }}" method="POST" style="display: inline;">
+                                                class="small app-btn-secondary text-primary" href="{{ route('zakat.edit', $data->id) }}">Konfirmasi</a>
+                                            <form action="{{ route('zakat.destroy', $data->id) }}" method="POST" style="display: inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
